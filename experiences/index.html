@@ -1,0 +1,65 @@
+---
+layout: default
+title: Experiences
+---
+
+<section class="experiences section">
+  <div class="container">
+    <h1 class="section-title">Professional Experience</h1>
+    <p class="section-description">
+      My professional journey and the experiences that have shaped my career in software development.
+    </p>
+
+    <div class="experiences-timeline">
+      {% for experience in site.experiences %}
+        <div class="experience-item card fade-in">
+          <div class="experience-header">
+            <div class="experience-company">
+              {% if experience.logo %}
+              <img 
+                src="{{ experience.logo | relative_url }}" 
+                alt="{{ experience.company }}"
+                class="company-logo"
+                loading="lazy"
+              />
+              {% endif %}
+              <div class="company-info">
+                <h3 class="company-name">{{ experience.company }}</h3>
+                <p class="position-title">{{ experience.position }}</p>
+              </div>
+            </div>
+            <div class="experience-meta">
+              <span class="location">📍 {{ experience.location }}</span>
+              <span class="date-range">
+                {{ experience.start_date | date: "%b %Y" }} - 
+                {% if experience.current %}
+                  <span class="current-badge">Present</span>
+                {% else %}
+                  {{ experience.end_date | date: "%b %Y" }}
+                {% endif %}
+              </span>
+            </div>
+          </div>
+
+          <div class="experience-content">
+            <div class="experience-description">
+              {{ experience.content }}
+            </div>
+
+            {% if experience.technologies %}
+            <div class="experience-technologies">
+              <h4 class="technologies-title">Technologies:</h4>
+              <div class="tech-tags">
+                {% for tech in experience.technologies %}
+                  <span class="tech-tag">{{ tech }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
