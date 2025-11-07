@@ -1,0 +1,59 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 class="footer-title">{{ site.profile.name }}</h3>
+        <p class="footer-bio">{{ site.profile.title }}</p>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
+          <li><a href="{{ '/experiences/' | relative_url }}">Experiences</a></li>
+          <li><a href="{{ '/posts/' | relative_url }}">Posts</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-heading">Connect</h4>
+        <ul class="footer-social">
+          {% if site.profile.social.linkedin %}
+          <li>
+            <a href="{{ site.profile.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              LinkedIn
+            </a>
+          </li>
+          {% endif %}
+          {% if site.profile.social.github %}
+          <li>
+            <a href="{{ site.profile.social.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              GitHub
+            </a>
+          </li>
+          {% endif %}
+          {% if site.profile.social.xing %}
+          <li>
+            <a href="{{ site.profile.social.xing }}" target="_blank" rel="noopener noreferrer" aria-label="Xing">
+              Xing
+            </a>
+          </li>
+          {% endif %}
+          {% if site.profile.social.twitter %}
+          <li>
+            <a href="{{ site.profile.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              Twitter
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.profile.name }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+

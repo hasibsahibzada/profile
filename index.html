@@ -1,0 +1,147 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img 
+          src="{{ site.profile.photo | relative_url }}" 
+          alt="{{ site.profile.name }}"
+          class="profile-photo"
+          loading="eager"
+        />
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-title">{{ site.profile.name }}</h1>
+        <p class="hero-subtitle">{{ site.profile.title }}</p>
+        <p class="hero-bio">{{ site.profile.bio }}</p>
+        <div class="hero-location">
+          <span class="location-icon">📍</span>
+          <span>{{ site.profile.location }}</span>
+        </div>
+        <div class="hero-social">
+          {% if site.profile.social.linkedin %}
+          <a 
+            href="{{ site.profile.social.linkedin }}" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="LinkedIn"
+          >
+            LinkedIn
+          </a>
+          {% endif %}
+          {% if site.profile.social.github %}
+          <a 
+            href="{{ site.profile.social.github }}" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="GitHub"
+          >
+            GitHub
+          </a>
+          {% endif %}
+          {% if site.profile.social.xing %}
+          <a 
+            href="{{ site.profile.social.xing }}" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Xing"
+          >
+            Xing
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-portfolio section">
+  <div class="container">
+    <h2 class="section-title">Featured Portfolio</h2>
+    <div class="portfolio-grid">
+      {% assign featured_portfolio = site.portfolio | where: "featured", true | limit: 3 %}
+      {% for item in featured_portfolio %}
+        <div class="portfolio-card card fade-in">
+          <div class="portfolio-image">
+            <img 
+              src="{{ item.image | relative_url }}" 
+              alt="{{ item.title }}"
+              loading="lazy"
+            />
+          </div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">{{ item.title }}</h3>
+            <p class="portfolio-description">{{ item.excerpt }}</p>
+            <div class="portfolio-technologies">
+              {% for tech in item.technologies %}
+                <span class="tech-tag">{{ tech }}</span>
+              {% endfor %}
+            </div>
+            <div class="portfolio-links">
+              {% if item.project_url %}
+              <a href="{{ item.project_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                View Project
+              </a>
+              {% endif %}
+              {% if item.github_url %}
+              <a href="{{ item.github_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                GitHub
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a href="{{ '/portfolio/' | relative_url }}" class="btn btn-primary">View All Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-posts section">
+  <div class="container">
+    <h2 class="section-title">Latest Posts</h2>
+    <div class="posts-grid">
+      {% assign featured_posts = site.posts | where: "featured", true | limit: 3 %}
+      {% for post in featured_posts %}
+        <article class="post-card card fade-in">
+          {% if post.image %}
+          <div class="post-image">
+            <img 
+              src="{{ post.image | relative_url }}" 
+              alt="{{ post.title }}"
+              loading="lazy"
+            />
+          </div>
+          {% endif %}
+          <div class="post-content">
+            <div class="post-meta">
+              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+              <span class="post-author">{{ site.profile.name }}</span>
+            </div>
+            <h3 class="post-title">{{ post.title }}</h3>
+            <p class="post-excerpt">{{ post.excerpt }}</p>
+            <div class="post-tags">
+              {% for tag in post.tags %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a href="{{ '/posts/' | relative_url }}" class="btn btn-primary">View All Posts</a>
+    </div>
+  </div>
+</section>
+

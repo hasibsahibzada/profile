@@ -1,0 +1,38 @@
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}" class="logo">
+        <span class="logo-text">HS</span>
+      </a>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-list" id="nav-list">
+        <li class="nav-item">
+          <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/portfolio/' | relative_url }}" class="{% if page.url contains '/portfolio/' %}active{% endif %}">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/experiences/' | relative_url }}" class="{% if page.url contains '/experiences/' %}active{% endif %}">Experiences</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/posts/' | relative_url }}" class="{% if page.url contains '/posts/' %}active{% endif %}">Posts</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.getElementById('menu-toggle')?.addEventListener('click', function() {
+    const navList = document.getElementById('nav-list');
+    const hamburger = this.querySelector('.hamburger');
+    navList?.classList.toggle('active');
+    hamburger?.classList.toggle('active');
+  });
+</script>
+
