@@ -21,7 +21,6 @@ profile:
 # Build Settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
