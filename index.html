@@ -22,6 +22,22 @@ title: Home
           <span class="location-icon">📍</span>
           <span>{{ site.profile.location }}</span>
         </div>
+        {% if site.profile.email or site.profile.phone %}
+        <div class="hero-contact">
+          {% if site.profile.email %}
+          <a href="mailto:{{ site.profile.email }}" class="contact-link">
+            <span class="contact-icon">✉️</span>
+            {{ site.profile.email }}
+          </a>
+          {% endif %}
+          {% if site.profile.phone %}
+          <a href="tel:{{ site.profile.phone }}" class="contact-link">
+            <span class="contact-icon">📞</span>
+            {{ site.profile.phone }}
+          </a>
+          {% endif %}
+        </div>
+        {% endif %}
         <div class="hero-social">
           {% if site.profile.social.linkedin %}
           <a 

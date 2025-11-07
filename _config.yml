@@ -9,8 +9,10 @@ baseurl: /profile
 # Profile Information
 profile:
   name: Hasibullah Sahibzada
-  title: Senior Software Engineer
-  bio: Passionate software engineer with expertise in Angular, TypeScript, and modern web technologies. Building scalable and high-performance applications.
+  title: Software Engineer
+  bio: Software Engineer with a decade of professional experience in building scalable social media analytics platforms, SaaS products, cloud-native solutions, and leading development teams. Expertise in TypeScript, ReactJS, Node.js, PHP, Kubernetes, and cloud technologies. Skilled at architecture design, performance tuning, and cross-functional collaboration.
+  email: hasibullah@sahibzada.org
+  phone: +49 1521 6967648
   photo: /assets/images/profile-photo.jpg
   location: Germany
   social:
