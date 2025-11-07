@@ -31,8 +31,10 @@ plugins:
 collections:
   portfolio:
     output: true
+    permalink: /portfolio/:name/
   experiences:
     output: true
+    permalink: /experiences/:name/
   posts:
     output: true
     permalink: /posts/:name/
