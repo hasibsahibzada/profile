@@ -5,6 +5,7 @@ location: Nohra, Germany
 start_date: 2014-03-01
 end_date: 2015-02-28
 current: false
+order: 3
 technologies:
   - PHP
   - ShopWare

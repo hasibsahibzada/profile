@@ -4,6 +4,7 @@ position: Software Engineer
 location: Hamburg, Germany
 start_date: 2023-01-01
 current: true
+order: 1
 technologies:
   - AngularJS
   - TypeScript

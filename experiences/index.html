@@ -11,7 +11,8 @@ title: Experiences
     </p>
 
     <div class="experiences-timeline">
-      {% for experience in site.experiences %}
+      {% assign sorted_experiences = site.experiences | sort: 'order' %}
+      {% for experience in sorted_experiences %}
         <div class="experience-item card fade-in">
           <div class="experience-header">
             <div class="experience-company">
