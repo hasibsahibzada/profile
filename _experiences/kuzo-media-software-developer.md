@@ -10,7 +10,7 @@ technologies:
   - PHP
   - ShopWare
   - MySQL
-logo: /assets/images/kuzo-logo.jpg
+logo: /assets/images/kuzo-logo.png
 ---
 
 ## Responsibilities

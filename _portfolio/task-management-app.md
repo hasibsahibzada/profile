@@ -1,7 +1,7 @@
 ---
 title: Task Management App
 excerpt: A collaborative task management application with real-time updates and team collaboration features.
-image: /assets/images/portfolio-2.jpg
+# image: /assets/images/portfolio-2.jpg
 technologies:
   - Angular
   - Firebase

@@ -13,6 +13,7 @@ title: Portfolio
     <div class="portfolio-grid">
       {% for item in site.portfolio %}
         <div class="portfolio-card card fade-in">
+          {% if item.image %}
           <div class="portfolio-image">
             <img 
               src="{{ item.image | relative_url }}" 
@@ -23,6 +24,7 @@ title: Portfolio
             <span class="featured-badge">Featured</span>
             {% endif %}
           </div>
+          {% endif %}
           <div class="portfolio-content">
             <h3 class="portfolio-title">{{ item.title }}</h3>
             <p class="portfolio-description">{{ item.excerpt }}</p>

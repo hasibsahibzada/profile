@@ -1,7 +1,7 @@
 ---
 title: E-Commerce Platform
 excerpt: A modern e-commerce platform built with Angular and TypeScript, featuring real-time inventory management and payment integration.
-image: /assets/images/portfolio-1.jpg
+# image: /assets/images/portfolio-1.jpg
 technologies:
   - Angular
   - TypeScript

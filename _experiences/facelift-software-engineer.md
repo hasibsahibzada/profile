@@ -13,7 +13,7 @@ technologies:
   - MySQL
   - Kubernetes
   - AWS
-logo: /assets/images/facelift-logo.jpg
+logo: /assets/images/facelift-logo.png
 ---
 
 ## Responsibilities

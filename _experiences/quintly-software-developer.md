@@ -15,7 +15,7 @@ technologies:
   - Serverless
   - Lambda
   - Step Functions
-logo: /assets/images/quintly-logo.jpg
+logo: /assets/images/quintly-logo.png
 ---
 
 ## Responsibilities

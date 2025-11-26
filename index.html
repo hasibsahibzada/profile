@@ -85,6 +85,7 @@ title: Home
       {% assign featured_portfolio = site.portfolio | where: "featured", true | limit: 3 %}
       {% for item in featured_portfolio %}
         <div class="portfolio-card card fade-in">
+          {% if item.image %}
           <div class="portfolio-image">
             <img 
               src="{{ item.image | relative_url }}" 
@@ -92,6 +93,7 @@ title: Home
               loading="lazy"
             />
           </div>
+          {% endif %}
           <div class="portfolio-content">
             <h3 class="portfolio-title">{{ item.title }}</h3>
             <p class="portfolio-description">{{ item.excerpt }}</p>
