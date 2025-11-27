@@ -670,12 +670,16 @@ a:hover {
 }
 
 .company-logo {
-  width: 60px;
-  height: 60px;
+  width: clamp(48px, 6vw, 80px);
+  height: clamp(48px, 6vw, 80px);
   border-radius: 0.5rem;
-  object-fit: cover;
-  border: 1px solid var(--border-color);
+  object-fit: contain;
   background-color: var(--bg-tertiary);
+  padding: 0.35rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .company-name {
