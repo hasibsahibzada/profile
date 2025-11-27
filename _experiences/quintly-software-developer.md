@@ -5,7 +5,7 @@ location: Köln, Germany
 start_date: 2016-12-01
 end_date: 2023-01-31
 current: false
-order: 2
+order: 3
 technologies:
   - ReactJS
   - Node.js
