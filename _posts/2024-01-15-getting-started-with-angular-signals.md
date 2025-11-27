@@ -7,7 +7,7 @@ tags:
   - Angular
   - Signals
   - TypeScript
-image: /assets/images/post-1.jpg
+image: /assets/images/post-1.png
 featured: true
 ---
 

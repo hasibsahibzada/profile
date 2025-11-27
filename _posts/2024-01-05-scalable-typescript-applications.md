@@ -7,7 +7,7 @@ tags:
   - TypeScript
   - Architecture
   - Best Practices
-image: /assets/images/post-3.jpg
+image: /assets/images/post-3.png
 featured: false
 ---
 

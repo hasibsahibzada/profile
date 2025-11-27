@@ -7,7 +7,7 @@ tags:
   - Angular
   - Performance
   - Optimization
-image: /assets/images/post-2.jpg
+image: /assets/images/post-2.png
 featured: true
 ---
 
