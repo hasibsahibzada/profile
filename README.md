@@ -63,7 +63,7 @@ Create new Markdown files in `_portfolio/` directory:
 ---
 title: Project Name
 excerpt: Short description
-image: /assets/images/portfolio-1.jpg
+image: /assets/images/portfolio-1.png
 technologies:
   - Angular
   - TypeScript
@@ -111,7 +111,7 @@ author: Hasibullah Sahibzada
 tags:
   - Angular
   - TypeScript
-image: /assets/images/post-1.jpg
+image: /assets/images/post-1.png
 featured: true
 ---
 
